@@ -43,7 +43,6 @@ class LinkedList {
       prev = current;
       current = current.next;
     }
-    // console.log("prev", prev);
     lnode.next = current.next;
     current.next = lnode;
     this.length++;
@@ -64,8 +63,6 @@ class LinkedList {
       current = current.next;
     }
     prev.next = null;
-    // console.log("\n****\n", "prev", prev, "\n****\n");
-    // console.log("\n****\n", "current", current, "\n****\n");
   }
 }
 
@@ -75,7 +72,5 @@ ls.insertAtFirst(new ListNode(3));
 ls.insertAtFirst(new ListNode(4));
 ls.insertAtLast(new ListNode(9));
 ls.insertAtGivenPosition(new ListNode(10), 2);
-console.log("*****\n", JSON.stringify(ls.head), "\n*****\n");
-console.log("--this.length--", ls.length);
-// ls.deleteAtEnd();
-// console.log("*****\n", JSON.stringify(ls.head), "\n*****\n");
+
+module.exports = ls;
