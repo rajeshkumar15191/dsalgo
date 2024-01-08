@@ -67,10 +67,12 @@ class LinkedList {
 }
 
 const ls = new LinkedList();
+ls.insertAtFirst(new ListNode(0));
 ls.insertAtFirst(new ListNode(2));
 ls.insertAtFirst(new ListNode(3));
 ls.insertAtFirst(new ListNode(4));
 ls.insertAtLast(new ListNode(9));
-ls.insertAtGivenPosition(new ListNode(10), 2);
+ls.insertAtLast(new ListNode(10));
+// ls.insertAtGivenPosition(new ListNode(10), 2);
 
 module.exports = ls;
