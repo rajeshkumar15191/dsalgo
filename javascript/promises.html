@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body id='body'>
+    <div id="A">
+        <div id="B">
+            <div id="C">C</div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('C').addEventListener('click', () => {
+            // const github_api = "https://api.github.com/users/rajeshkumar15191";
+            // const users = fetch(github_api)
+            // users.then(data => {
+            //     console.log(data)
+            // })
+            // console.log('users', users)
+            const promise1 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('promise1')
+                }, 1000)
+                reject('error happened')
+            })
+
+            const promise2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('promise2')
+                }, 1000)
+            })
+
+            Promise.all([promise1, promise2]).then((values) => {
+                console.log(values);
+            });
+
+        })
+
+
+    </script>
+</body>
+
+</html>
